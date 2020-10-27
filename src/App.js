@@ -1,7 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { blue } from '@material-ui/core/colors';
-import ProgressDial from './components/progressDial';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import Dashboard from './pages/dashboard';
+import AddExpense from './pages/addExpense';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -12,6 +18,7 @@ const useStyles = makeStyles(() => ({
     width: '100vw',
     height: '100vh',
     flexDirection: 'column',
+    color: 'white',
   },
 }));
 
@@ -20,9 +27,16 @@ export default function App() {
 
   return (
     <div className={classes.root}>
-      <h1>Per Diem</h1>
-      <ProgressDial />
-      <h5>Add Expense</h5>
+      <Router>
+        <Switch>
+          <Route path="/home">
+            <AddExpense />
+          </Route>
+          <Route path="/">
+            <Dashboard />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
