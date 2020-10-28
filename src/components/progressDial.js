@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     alignItems: 'center',
+    flexDirection: 'column',
   },
   wrapper: {
     margin: theme.spacing(1),
@@ -45,6 +46,7 @@ export default function ProgressDial() {
         </div>
         <CircularProgress variant="static" value={80} size={200} className={classes.fabProgress} />
       </div>
+      <h3>4 Days Left</h3>
     </div>
   );
 }
