@@ -1,8 +1,8 @@
 import { ADD_START_DATE, ADD_END_DATE } from './dates.types';
 
-export const addStartDate = (date) => ({
+export const resetStartDate = () => ({
   type: ADD_START_DATE,
-  payload: date,
+  payload: Date.now(),
 });
 
 export const addEndDate = (date) => ({
