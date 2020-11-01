@@ -7,7 +7,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Dashboard from './pages/dashboard';
-import AddExpense from './pages/addExpense';
+import Expenses from './pages/expenses';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -30,7 +30,7 @@ export default function App() {
       <Router>
         <Switch>
           <Route path="/home">
-            <AddExpense />
+            <Expenses />
           </Route>
           <Route path="/">
             <Dashboard />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
+import ExpenseTable from '../components/expenseTable';
 
 const useStyles = makeStyles(() => ({
   link: {
@@ -13,12 +14,15 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function AddExpense() {
+export default function Expenses() {
   const classes = useStyles();
 
   return (
     <>
-      <h1>Add Expense</h1>
+      <h1>Expenses List</h1>
+      <div>
+        <ExpenseTable />
+      </div>
       <div className={classes.bottomNav}>
         <Link to="/">
           <Button variant="contained">
